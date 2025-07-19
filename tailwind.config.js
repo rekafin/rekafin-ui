@@ -16,6 +16,7 @@ export default {
         "form-text": "#536471",
         "btn-primary": "#3A519D",
         "underline-color": "#249CD9",
+        "neutral": "#2D2D2D",
       },
     },
   },
