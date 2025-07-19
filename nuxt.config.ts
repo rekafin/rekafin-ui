@@ -6,5 +6,10 @@ export default defineNuxtConfig({
     exposeConfig: true,
     viewer: true,
   },
-  modules: ["@nuxtjs/tailwindcss"],
+  googleFonts: {
+    families: {
+      Manrope: [400, 500, 700]
+    }
+  },
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxtjs/google-fonts"],
 });
