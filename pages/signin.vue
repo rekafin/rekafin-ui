@@ -20,7 +20,7 @@
       </div>
     </section>
     <section class=" w-full md:w-1/2 bg-gradient-primary md:min-h-screen p-8 pr-0">
-      <NuxtImg class=" scale-150" src="/logo.svg" />
+      <NuxtImg class=" w-36" src="/logo.svg" />
       <div class=" h-full flex items-center justify-end">
         <NuxtImg src="/graphics/graphic-login.png" />
       </div>
@@ -29,6 +29,10 @@
 </template>
 
 <script lang="ts" setup>
+
+definePageMeta({
+  layout: "default"
+})
 
 const formData = reactive({
   email: "",

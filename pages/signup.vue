@@ -24,7 +24,7 @@
       </div>
     </section>
     <section class=" w-full md:w-1/2 bg-gradient-primary md:min-h-screen p-8">
-      <NuxtImg class=" scale-150" src="/logo.svg" />
+      <NuxtImg class=" w-36" src="/logo.svg" />
       <div class=" h-full flex items-center">
         <NuxtImg class=" scale-90 " src="/graphics/graphic-register.png" />
       </div>
