@@ -1,7 +1,7 @@
 <template>
   <div class=" flex flex-col md:flex-row justify-evenly">
     <!-- section 1 -->
-    <section class=" w-full md:w-1/2 p-5 flex items-center justify-center ">
+    <section class=" w-full md:w-1/2 min-h-screen p-5 flex items-center justify-center ">
       <div class="flex flex-col gap-5 w-3/4">
         <div>
           <h1 class=" font-bold text-2xl">Register</h1>
@@ -18,15 +18,15 @@
         </form>
 
         <button @click="submitForm" class=" p-2 rounded-md font-bold bg-btn-primary text-white">Register</button>
-        <p class=" text-sm text-center">Belum punya akun? <NuxtLink to="/signin"
+        <p class=" text-sm text-center">Sudah punya akun? <NuxtLink to="/signin"
             class=" underline text-underline-color font-medium">Login</NuxtLink>
         </p>
       </div>
     </section>
     <section class=" w-full md:w-1/2 bg-gradient-primary md:min-h-screen p-8">
-      <img src="/public/logo.svg" />
+      <NuxtImg class=" scale-150" src="/logo.svg" />
       <div class=" h-full flex items-center">
-        <img class=" scale-90 " src="../assets/images/graphics/graphic-register.png" />
+        <NuxtImg class=" scale-90 " src="/graphics/graphic-register.png" />
       </div>
     </section>
   </div>
