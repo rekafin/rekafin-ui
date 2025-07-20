@@ -1,0 +1,9 @@
+services:
+  ui:
+    build: .
+    container_name: rekafin-ui
+    ports:
+      - "127.0.0.1:3000:3000"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
