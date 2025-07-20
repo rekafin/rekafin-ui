@@ -1,6 +1,11 @@
 <template>
-  <div class=" text-xl bg-red-200">
-    landing page is here
+  <div>
+    <Navbar />
+    <IntroSection />
+    <Portofolio />
+    <HowToUse />
+    <Pricing />
+    <FaqSection />
   </div>
 </template>
 
