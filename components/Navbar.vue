@@ -8,14 +8,14 @@
         <div class="lg:absolute md:flex justify-between items-center">
           <nuxt-link to="/"
             ><img
-              class="w-[90px] lg:w-[100px] xl:w-[120px] absolute lg:static pb-5 h-auto mt-5"
+              class="w-[90px] lg:w-[100px] xl:w-[120px] absolute lg:static pb-5 h-auto mt-5 z-30"
               src="/navbar/navbar.webp"
               alt="navbar"
           /></nuxt-link>
         </div>
 
         <button
-          class="absolute lg:hidden right-5 top-2 cursor-pointer"
+          class="absolute lg:hidden right-5 top-2 cursor-pointer z-30"
           @click="isOpen = !isOpen"
         >
           <div
@@ -56,8 +56,12 @@
         <div class="lg:flex lg:justify-end">
           <div class="lg:absolute">
             <div
-              class="max-lg:bg-white lg:flex xl:gap-[52px] font-medium lg:items-center lg:px-0 px-5 md:px-8 lg:py-[12px] lg:static lg:gap-[42px] lg:pb-0 pb-10 absolute w-full top-[60px] py-2 duration-700 z-20"
-              :class="[isOpen ? 'right-0' : 'right-[100%]']"
+              class="pb-10 font-medium max-lg:bg-white w-full duration-700 z-20 transition-all absolute left-0  lg:static lg:flex lg:items-center lg:gap-[42px] xl:gap-[52px] lg:pb-0 lg:px-0 lg:py-[12px] px-5 md:px-8 "
+              :class="
+                isOpen
+                  ? 'max-lg:top-[0px] pt-[64px] max-lg:opacity-100'
+                  : 'max-lg:top-[-100%] max-lg:opacity-0'
+              "
             >
               <div v-for="(item, index) in data" :key="index" class="pb-[16px]">
                 <a href="/">{{ item.name }}</a>
