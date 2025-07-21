@@ -1,18 +1,21 @@
 <template>
-  <div class="sticky top-0 z-20">
+  <div
+    class="sticky top-0 z-20 duration-300"
+    :class="[isScrolled ? 'bg-white h-16 shadow-md top-0 ' : ' bg-none']"
+  >
     <div class="relative">
-      <div
-        class="container lg:absolute md:flex lg:pt-0 justify-between items-center"
-      >
-        <nuxt-link to="/"
-          ><img
-            class="w-[90px] lg:w-[100px] xl:w-[120px] absolute lg:static pb-5 h-auto mt-5"
-            src="/navbar/navbar.webp"
-            alt="navbar"
-        /></nuxt-link>
+      <div class="container">
+        <div class="lg:absolute md:flex justify-between items-center">
+          <nuxt-link to="/"
+            ><img
+              class="w-[90px] lg:w-[100px] xl:w-[120px] absolute lg:static pb-5 h-auto mt-5"
+              src="/navbar/navbar.webp"
+              alt="navbar"
+          /></nuxt-link>
+        </div>
 
         <button
-          class="absolute lg:hidden right-2 sm:right-10 top-2 cursor-pointer"
+          class="absolute lg:hidden right-5 top-2 cursor-pointer"
           @click="isOpen = !isOpen"
         >
           <div
@@ -50,19 +53,23 @@
           </div>
         </button>
 
-        <div
-          class=" lg:flex xl:gap-[52px] font-medium lg:items-center lg:px-0 px-5 md:px-8 lg:py-[12px] lg:gap-[42px] lg:pb-0 pb-10 lg:static absolute lg:w-auto w-full top-[70px] duration-700 ease-in z-20"
-          :class="[isOpen ? 'right-0' : 'right-[100%]']"
-        >
-          <div v-for="(item, index) in data" :key="index" class="pb-[16px]">
-            <a href="/">{{ item.name }}</a>
+        <div class="lg:flex lg:justify-end">
+          <div class="lg:absolute">
+            <div
+              class="max-lg:bg-white lg:flex xl:gap-[52px] font-medium lg:items-center lg:px-0 px-5 md:px-8 lg:py-[12px] lg:static lg:gap-[42px] lg:pb-0 pb-10 absolute w-full top-[60px] py-2 duration-700 z-20"
+              :class="[isOpen ? 'right-0' : 'right-[100%]']"
+            >
+              <div v-for="(item, index) in data" :key="index" class="pb-[16px]">
+                <a href="/">{{ item.name }}</a>
+              </div>
+              <button
+                @click="toLoginPage"
+                class="text-[14px] border-[#3A519D] border-2 lg:mb-2 text-[#3A519D] w-full py-2.5 lg:py-0 pt-[8px] lg:mt-0 lg:w-[100px] mb-2 xl:mb-3 lg:h-[38px] xl:w-[100px] xl:h-[40px] duration-300 font-semibold rounded"
+              >
+                Login
+              </button>
+            </div>
           </div>
-          <button
-            @click="toLoginPage"
-            class="text-[14px] border-[#3A519D] border-2 lg:mb-2 text-[#3A519D] w-full py-2.5 lg:py-0 pt-[8px] lg:mt-0 lg:w-[100px] mb-2 xl:mb-3 lg:h-[38px] xl:w-[100px] xl:h-[40px] duration-300 font-semibold rounded"
-          >
-            Login
-          </button>
         </div>
       </div>
     </div>
@@ -74,6 +81,7 @@ export default {
   data() {
     return {
       isOpen: false,
+      isScrolled: false,
       data: [
         {
           name: "Benefit",
@@ -90,11 +98,20 @@ export default {
       ],
     };
   },
-  methods:{
-    toLoginPage(){
-        this.$router.push('/signin')
-    }
-  }
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    toLoginPage() {
+      this.$router.push("/login");
+    },
+    handleScroll() {
+      this.isScrolled = window.scrollY > 10;
+    },
+  },
 };
 </script>
 

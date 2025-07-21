@@ -6,6 +6,7 @@
     <HowToUse />
     <Pricing />
     <FaqSection />
+    <Footer/>
   </div>
 </template>
 
