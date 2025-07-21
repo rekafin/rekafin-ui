@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col lg:grid lg:grid-cols-2 bg-[linear-gradient(to_bottom_right,_#ffffff,_#BCEDFF,_#D9E0FE,_#ffffff)] h-full"
+    class="flex flex-col lg:grid lg:grid-cols-2 max-lg:bg-[linear-gradient(to_bottom_right,_#ffffff,_#BCEDFF,_#D9E0FE,_#ffffff)] h-full"
   >
     <div class="container my-[40px]">
       <div class="flex lg:mt-[160px] flex-col gap-5 ml-[50px] mr-[20px] xl:mr-0 xl:ml-0">
@@ -15,7 +15,7 @@
           <div class="flex mb-[8px] xl:mb-[16px] pl-2 rounded-lg border bg-white">
             <img src="/graphics/profile.svg" alt="" />
             <input
-              class="w-full py-2 pl-2 rounded-lg"
+              class=" outline-none text-[14px] w-full py-2 pl-2 rounded-lg"
               v-model="formData.name"
               type="text"
               placeholder="Nama Lengkap"
@@ -23,7 +23,7 @@
           <div class="flex mb-[8px] xl:mb-[16px] pl-2 rounded-lg border bg-white">
             <img src="/graphics/phone.svg" alt="" />
             <input
-              class="w-full py-2 pl-2 rounded-lg"
+              class=" outline-none text-[14px] w-full py-2 pl-2 rounded-lg"
               v-model="formData.phone"
               type="number"
               placeholder="Nomor HP"
@@ -31,26 +31,26 @@
           <div class="flex mb-[8px] xl:mb-[16px] pl-2 rounded-lg border bg-white">
             <img src="/graphics/email.svg" alt="" />
             <input
-              class="w-full py-2 pl-2 rounded-lg"
+              class=" outline-none text-[14px] w-full py-2 pl-2 rounded-lg"
               v-model="formData.email"
               type="email"
               placeholder="Email"
             />
           </div>
-          <div class="flex mb-[8px] xl:mb-[16px] pl-2 rounded-lg bg-white">
+          <div class="flex mb-[8px] border xl:mb-[16px] pl-2 rounded-lg bg-white">
             <img class="" src="/graphics/password.svg" alt="password" />
             <input
-              class="w-full py-2 pl-2 rounded-lg"
+              class=" outline-none text-[14px] w-full py-2 pl-2 rounded-lg"
               v-model="formData.password"
               type="password"
               placeholder="Password"
             />
             <img class="pr-2" src="/public/graphics/iconoir-eye.svg" alt="">
           </div>
-          <div class="flex mb-[8px] xl:mb-[16px] pl-2 rounded-lg bg-white">
+          <div class="flex mb-[8px] border xl:mb-[16px] pl-2 rounded-lg bg-white">
             <img class="" src="/graphics/password.svg" alt="password" />
             <input
-              class="w-full py-2 pl-2 rounded-lg"
+              class=" outline-none text-[14px] w-full py-2 pl-2 rounded-lg"
               v-model="formData.passwordConfirm"
               type="password"
               placeholder="Konfirmasi Password"
@@ -79,7 +79,7 @@
       </div>
     </div>
 
-    <div>
+    <div class="pl-[40px] xl:pl-[48px] lg:bg-[linear-gradient(to_bottom_right,_#ffffff,_#BCEDFF,_#D9E0FE,_#ffffff)]">
       <div class="hidden lg:block mt-[46px]">
         <nuxt-link to="/">
           <img class="w-[100px]" src="/public/graphics/navbar.webp" alt="">

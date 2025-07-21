@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col lg:grid lg:grid-cols-2 bg-[linear-gradient(to_bottom_right,_#ffffff,_#BCEDFF,_#D9E0FE,_#ffffff)] h-full"
+    class="flex flex-col lg:grid lg:grid-cols-2 max-lg:bg-[linear-gradient(to_bottom_right,_#ffffff,_#BCEDFF,_#D9E0FE,_#ffffff)] h-[800px]"
   >
     <div class="container my-[40px]">
       <div class="flex mt-[160px] flex-col gap-5 ml-[50px] mr-[20px] xl:mr-0 xl:ml-0">
@@ -15,16 +15,16 @@
           <div class="flex mb-[8px] xl:mb-[16px] pl-2 rounded-lg border bg-white">
             <img src="/graphics/email.svg" alt="" />
             <input
-              class="w-full py-2 rounded-lg pl-2"
+              class="outline-none text-[14px] w-full py-2 rounded-lg pl-2"
               v-model="formData.email"
               type="email"
               placeholder="Email"
             />
           </div>
-          <div class="flex mb-[8px] xl:mb-[16px] pl-2 rounded-lg bg-white">
+          <div class="flex border mb-[8px] xl:mb-[16px] pl-2 rounded-lg bg-white">
             <img class="" src="/graphics/password.svg" alt="password" />
             <input
-              class="w-full py-2 rounded-lg pl-2"
+              class="outline-none text-[14px] w-full py-2 rounded-lg pl-2"
               v-model="formData.password"
               type="password"
               placeholder="Password"
@@ -55,7 +55,7 @@
       </div>
     </div>
 
-    <div>
+    <div class="lg:bg-[linear-gradient(to_bottom_right,_#ffffff,_#BCEDFF,_#D9E0FE,_#ffffff)] pl-[40px] xl:pl-[48px]"> 
       <div class="hidden lg:block mt-[46px]">
         <nuxt-link to="/">
           <img class="w-[100px]" src="/public/graphics/navbar.webp" alt="">
@@ -91,4 +91,5 @@ export default {
 </script>
 
 <style>
+
 </style>
