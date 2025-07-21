@@ -30,10 +30,6 @@
 
 <script lang="ts" setup>
 
-definePageMeta({
-  layout: "default"
-})
-
 const formData = reactive({
   email: "",
   password: "",

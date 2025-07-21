@@ -1,7 +1,7 @@
 <template>
   <div>
     <slot />
-    <RekafinFooter />
+    
   </div>
 </template>
 

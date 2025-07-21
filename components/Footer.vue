@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-[30px]">
+  <div class="mt-[20px]">
     <div class="md:flex container">
       <div class="md:border-b-2 md:py-5 md:border-t-2">
         <div class="mb-10">
