@@ -3,9 +3,7 @@
     class="flex flex-col lg:grid lg:grid-cols-2 max-lg:bg-[linear-gradient(to_bottom_right,_#ffffff,_#BCEDFF,_#D9E0FE,_#ffffff)] min-h-screen"
   >
     <div class="container my-[40px]">
-      <div
-        class="flex mt-[160px] flex-col gap-5 ml-[50px] mr-[20px] xl:mr-0 xl:ml-0"
-      >
+      <div class="flex lg:mt-[160px] flex-col gap-5 lg:ml-[50px] lg:mr-[20px] xl:mr-0 xl:ml-0">
         <div>
           <h1 class="font-bold text-2xl">Login</h1>
           <h2 class="font-normal text-sm">
