@@ -20,8 +20,8 @@
         <div class="mt-[18px] lg:container flex justify-center relative">
           <img class=" h-auto hidden lg:block xl:w-[806px] w-[700px]" src="/intro-section/background-desktop.webp" alt="">
           <img class="hidden lg:block absolute xl:w-[200px] w-[170px] xl:top-0 -top-3 left-[140px] xl:left-[344px]" src="/intro-section/time.webp" alt="">
-          <img class="hidden lg:block absolute xl:w-[200px] w-[170px] xl:top-16 top-10 left-[180px] xl:left-[284px]" src="/intro-section/simple.webp" alt="">
-          <img class="hidden lg:block absolute xl:w-[200px] w-[170px] xl:top-[140px] top-[100px] left-[140px] xl:left-[344px]" src="/intro-section/support.webp" alt="">
+          <img class="hidden lg:block absolute xl:w-[200px] w-[170px] xl:top-20 top-10 left-[180px] xl:left-[284px]" src="/intro-section/support.webp" alt="">
+          <img class="hidden lg:block absolute xl:w-[200px] w-[170px] xl:top-[140px] top-[100px] left-[140px] xl:left-[344px]" src="/intro-section/simple.webp" alt="">
           <img class="hidden lg:block absolute xl:w-[160px] w-[150px] xl:-top-2 -top-5 right-9 xl:right-[174px]" src="/intro-section/profile.webp" alt="">
           <img class="hidden lg:block absolute xl:w-[160px] w-[150px] top-[50px] xl:top-[65px] right-[85px] xl:right-[234px]" src="/intro-section/ai.webp" alt="">
         </div>
