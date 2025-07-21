@@ -15,7 +15,7 @@
           <button
             @click="isOpenBusiness = true"
             :class="isOpenBusiness ? 'bg-[#3A519D] text-white' : ''"
-            class="  rounded-lg px-10  w-full py-3 text-[14px] sm:text-[16px] font-semibold text-center"
+            class=" hover:bg-[#3A519D] hover:text-white rounded-lg px-10  w-full py-3 text-[14px] sm:text-[16px] font-semibold text-center"
           >
             Personal
           </button>

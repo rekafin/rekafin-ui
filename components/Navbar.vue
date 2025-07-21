@@ -110,7 +110,7 @@ export default {
   },
   methods: {
     toLoginPage() {
-      this.$router.push("/login");
+      this.$router.push("/signin");
     },
     handleScroll() {
       this.isScrolled = window.scrollY > 10;
