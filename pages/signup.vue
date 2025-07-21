@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col lg:grid lg:grid-cols-2 max-lg:bg-[linear-gradient(to_bottom_right,_#ffffff,_#BCEDFF,_#D9E0FE,_#ffffff)] h-full"
+    class="flex flex-col lg:grid lg:grid-cols-2 max-lg:bg-[linear-gradient(to_bottom_right,_#ffffff,_#BCEDFF,_#D9E0FE,_#ffffff)] min-h-screen"
   >
     <div class="container my-[40px]">
       <div class="flex lg:mt-[160px] flex-col gap-5 ml-[50px] mr-[20px] xl:mr-0 xl:ml-0">
@@ -25,7 +25,7 @@
             <input
               class=" outline-none text-[14px] w-full py-2 pl-2 rounded-lg"
               v-model="formData.phone"
-              type="number"
+              type="text"
               placeholder="Nomor HP"
             /></div>
           <div class="flex mb-[8px] xl:mb-[16px] pl-2 rounded-lg border bg-white">
@@ -45,7 +45,6 @@
               type="password"
               placeholder="Password"
             />
-            <img class="pr-2" src="/public/graphics/iconoir-eye.svg" alt="">
           </div>
           <div class="flex mb-[8px] border xl:mb-[16px] pl-2 rounded-lg bg-white">
             <img class="" src="/graphics/password.svg" alt="password" />
@@ -55,7 +54,7 @@
               type="password"
               placeholder="Konfirmasi Password"
             />
-            <img class="pr-2" src="/public/graphics/hidden-eye.svg" alt="">
+
           </div>
         </div>
 
@@ -98,8 +97,11 @@ export default {
   data() {
     return {
       formData: {
+        name: "",
+        phone: "",
         email: "",
         password: "",
+        passwordConfirm: "",
       },
     };
   },
