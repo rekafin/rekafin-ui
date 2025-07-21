@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-[30px]">
+  <div class="mt-[20px]">
     <div class="md:flex container">
       <div class="md:border-b-2 md:py-5 md:border-t-2">
         <div class="mb-10">
@@ -17,7 +17,7 @@
         </div>
       </div>
       <div
-        class="py-3 border-t-2 max-md:container justify-between lg:gap-14 xl:gap-20 flex border-b-2"
+        class="py-3 border-t-2 justify-between lg:gap-14 xl:gap-20 flex border-b-2"
       >
         <div class="flex flex-col gap-2">
           <h1 class="font-semibold text-[14px] lg:text-[16px]">Rekafin</h1>
@@ -66,7 +66,7 @@
   </div>
   <div class="my-10 md:container md:flex md:justify-between">
     <h1 class="text-center text-[12px] md:mt-3 md:text-[14px] font-light">
-      Copyright © 2023 Rekafin. All rights reserved.
+      Copyright © 2025 Rekafin. All rights reserved.
     </h1>
     <div class="flex justify-center gap-6 my-5 md:my-0">
       <button>

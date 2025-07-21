@@ -7,28 +7,30 @@
         sesuai kebutuhan.
       </p>
     </div>
-    <div
-      class="flex justify-between p-1.5 my-8 border-2 rounded-lg mx-8 sm:mx-[210px] lg:mx-[330px] xl:mx-[415px]"
-    >
-    
-      <div class="">
-        <button
-          @click="isOpenBusiness = true"
-          class="bg-[#3A519D] text-white rounded-lg px-10 w-full py-2 text-[14px] sm:text-[16px] font-semibold text-center"
-        >
-          Personal
-        </button>
-      </div>
-      <div class="">
-        <button
-          @click="isOpenBusiness = false"
-          class="bg-[#3A519D] px-10 rounded-lg w-full py-2 text-[14px] sm:text-[16px] font-semibold text-center"
-        >
-          Bisnis
-        </button>
+    <div class="flex justify-center">
+      <div
+        class="flex justify-between gap-3 p-1.5 my-8 border-2 rounded-lg w-[286px] sm:w-[290px] md:w-[300px] lg:w-[320px]"
+      >
+        <div class="">
+          <button
+            @click="isOpenBusiness = true"
+            :class="isOpenBusiness ? 'bg-[#3A519D] text-white' : ''"
+            class=" hover:bg-[#3A519D] hover:text-white rounded-lg px-10  w-full py-3 text-[14px] sm:text-[16px] font-semibold text-center"
+          >
+            Personal
+          </button>
+        </div>
+        <div class="">
+          <button
+            @click="isOpenBusiness = false"
+            :class="!isOpenBusiness ? 'bg-[#3A519D] text-white' : ''"
+            class="hover:bg-[#3A519D] hover:text-white px-10 md:px-12 rounded-lg w-full py-3 text-[14px] sm:text-[16px] font-semibold text-center"
+          >
+            Bisnis
+          </button>
+        </div>
       </div>
     </div>
-
     <div
       v-if="isOpenBusiness"
       class="lg:mb-16 mb-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5"

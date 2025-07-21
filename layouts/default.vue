@@ -1,13 +1,7 @@
-<template>
-  <div>
-    <slot />
-    <RekafinFooter />
-  </div>
-</template>
-
-<script lang="ts" setup>
-
-
+<script setup lang="ts">
+import { NuxtPage } from "#components";
 </script>
 
-<style></style>
+<template>
+  <NuxtPage />
+</template>

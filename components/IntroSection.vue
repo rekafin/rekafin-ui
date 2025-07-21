@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[linear-gradient(to_bottom_right,_#ffffff,_#BCEDFF,_#D9E0FE,_#ffffff)] rounded-b-[45px] h-[620px] md:h-[780px] lg:h-[740px] md:rounded-b-[150px] lg:rounded-b-[250px] relative">
+    <div class="bg-[linear-gradient(to_bottom_right,_#ffffff,_#BCEDFF,_#D9E0FE,_#ffffff)] rounded-b-[45px] h-[620px] md:h-[780px] lg:h-[740px] md:rounded-b-[1px] lg:rounded-b-[1px] relative">
         <div class="container ">
           <div class="pt-[120px] flex flex-col justify-center text-center ">
               <h1 class="text-[22px] lg:text-[30px] font-bold">Atur Keuangan Tanpa Ribet, Cukup Lewat Chat!</h1>
@@ -14,16 +14,16 @@
               </div>
           </div>
         </div>
-        <div class="mt-[18px]">
+        <div class="mt-[18px] ">
           <img class="w-full h-auto lg:hidden" src="/intro-section/background-mobile.webp" alt="">
         </div>
-        <div class="mt-[18px] flex justify-center relative">
-          <img class=" h-auto hidden lg:block w-[876px]" src="/intro-section/background-desktop.webp" alt="">
-          <img class="hidden lg:block absolute w-[200px] top-0 lg:left-[80px] xl:left-[344px]" src="/intro-section/time.webp" alt="">
-          <img class="hidden lg:block absolute w-[200px] top-16 lg:left-[45px] xl:left-[284px]" src="/intro-section/simple.webp" alt="">
-          <img class="hidden lg:block absolute w-[200px] top-[140px] lg:left-[80px] xl:left-[344px]" src="/intro-section/support.webp" alt="">
-          <img class="hidden lg:block absolute w-[180px] -top-8 lg:-top-2 lg:right-[10px] xl:right-[144px]" src="/intro-section/profile.webp" alt="">
-          <img class="hidden lg:block absolute w-[180px] lg:top-[85px] xl:top-[65px] lg:right-[20px] xl:right-[234px]" src="/intro-section/ai.webp" alt="">
+        <div class="mt-[18px] lg:container flex justify-center relative">
+          <img class=" h-auto hidden lg:block xl:w-[806px] w-[700px]" src="/intro-section/background-desktop.webp" alt="">
+          <img class="hidden lg:block absolute xl:w-[200px] w-[170px] xl:top-0 -top-3 left-[140px] xl:left-[344px]" src="/intro-section/time.webp" alt="">
+          <img class="hidden lg:block absolute xl:w-[200px] w-[170px] xl:top-20 top-10 left-[180px] xl:left-[284px]" src="/intro-section/support.webp" alt="">
+          <img class="hidden lg:block absolute xl:w-[200px] w-[170px] xl:top-[140px] top-[100px] left-[140px] xl:left-[344px]" src="/intro-section/simple.webp" alt="">
+          <img class="hidden lg:block absolute xl:w-[160px] w-[150px] xl:-top-2 -top-5 right-9 xl:right-[174px]" src="/intro-section/profile.webp" alt="">
+          <img class="hidden lg:block absolute xl:w-[160px] w-[150px] top-[50px] xl:top-[65px] right-[85px] xl:right-[234px]" src="/intro-section/ai.webp" alt="">
         </div>
   </div>
 </template>

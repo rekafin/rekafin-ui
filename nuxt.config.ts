@@ -8,8 +8,16 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      Manrope: [400, 500, 700]
-    }
+      Manrope: [400, 500, 700],
+    },
+  },
+  vite: {
+    server: {
+      watch: {
+        usePolling: true,
+        interval: 100,
+      },
+    },
   },
   modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxtjs/google-fonts"],
 });

@@ -12,8 +12,8 @@
         </div>
         <div class=" lg:flex lg:flex-col">
             <div class="relative" v-for="item,index in data" :key="index">
-                <img class="absolute w-[30px] md:w-[40px] -top-2 left-0" :class="item.title === 'Input via Chat Whatsapp' ? 'lg:left-6' : ''  || item.title === 'Berbasis AI' ? 'lg:left-6' : ''" src="/portofolio/card-icon.webp" alt="icon">
-                <div class="bg-[#D0D8F8] border rounded-lg ml-2 p-5 mb-5" :class="item.title === 'Input via Chat Whatsapp' ? 'lg:ml-10' : ''  || item.title === 'Berbasis AI' ? 'lg:ml-10' : '' || item.title === 'Update Realtime' ? 'lg:mr-10' : ''  || item.title === 'Fitur Analisa Lengkap' ? 'lg:mr-10' : ''">
+                <img class="absolute w-[30px] md:w-[40px] -top-2 left-0" :class="item.title === 'Input via Chat Whatsapp' ? 'lg:left-6' : ''  || item.title === 'Update Realtime' ? 'lg:left-6' : ''" src="/portofolio/card-icon.webp" alt="icon">
+                <div class="bg-[#D0D8F8] border rounded-lg ml-2 p-5 mb-5" :class="item.title === 'Input via Chat Whatsapp' ? 'lg:ml-10' : ''  || item.title === 'Update Realtime' ? 'lg:ml-10' : '' || item.title === 'Berbasis AI' ? 'lg:mr-10' : ''  || item.title === 'Fitur Analisa Lengkap' ? 'lg:mr-10' : ''">
                     <h1 class="text-[14px] md:text-[16px] font-semibold">{{ item.title }}</h1>
                     <p class="text-[12px] md:text-[14px]">{{ item.description }}</p>
                 </div>
@@ -35,12 +35,12 @@ data() {
             description:"Catat pengeluaran & pemasukan langsung dari chat. Gak perlu buka aplikasi.",
         },
             {
-            title: "Update Realtime",
-            description:"Pencatatan keuangan terekap secara realtime",
-        },
-            {
             title: "Berbasis AI",
             description:"Proses pencatatan keuangan lebih mudah tanpa perintah baku karena berbasis AI",
+        },
+            {
+            title: "Update Realtime",
+            description:"Pencatatan keuangan terekap secara realtime",
         },
             {
             title: "Fitur Analisa Lengkap",
@@ -54,4 +54,4 @@ data() {
 
 <style>
 
-</style>
+</style>a
