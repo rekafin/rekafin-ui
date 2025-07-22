@@ -1,7 +1,11 @@
 <template>
   <div class="container">
     <div class="pt-[60px]">
-      <h1 class="text-[18px] md:text-[20px] lg:text-[22px] text-center font-semibold">Pricing</h1>
+      <h1
+        class="text-[18px] md:text-[20px] lg:text-[22px] text-center font-semibold"
+      >
+        Pricing
+      </h1>
       <p class="text-center">
         Berikut ini daftar paket berlangganan Rekafin yang bisa kamu pilih
         sesuai kebutuhan.
@@ -15,7 +19,7 @@
           <button
             @click="isOpenBusiness = true"
             :class="isOpenBusiness ? 'bg-[#3A519D] text-white' : ''"
-            class=" hover:bg-[#3A519D] hover:text-white rounded-lg px-10  w-full py-3 text-[14px] sm:text-[16px] font-semibold text-center"
+            class="hover:bg-[#3A519D] hover:text-white rounded-lg px-10 w-full py-3 text-[14px] sm:text-[16px] font-semibold text-center"
           >
             Personal
           </button>
@@ -39,6 +43,7 @@
         v-for="(card, index) in cardsPersonal"
         :key="index"
         :dataCard="card"
+        @goToPayment="toPagePayment"
       />
     </div>
     <div v-else>
@@ -47,6 +52,7 @@
           v-for="(card, index) in cardsBusiness"
           :key="index"
           :dataCard="card"
+          @goToPayment="toPagePayment"
         />
       </div>
     </div>
@@ -62,6 +68,7 @@ export default {
       isOpenBusiness: true,
       cardsPersonal: [
         {
+          name: "Personal",
           mount: 1,
           price: "xxxx",
           benefit: [
@@ -75,6 +82,7 @@ export default {
           ],
         },
         {
+          name: "Personal",
           mount: 6,
           price: "xxxx",
           benefit: [
@@ -88,6 +96,7 @@ export default {
           ],
         },
         {
+          name: "Personal",
           mount: 12,
           price: "xxxx",
           benefit: [
@@ -103,6 +112,7 @@ export default {
       ],
       cardsBusiness: [
         {
+          name: "Bisnis",
           mount: 1,
           price: "xxxx",
           benefit: [
@@ -116,6 +126,7 @@ export default {
           ],
         },
         {
+          name: "Bisnis",
           mount: 6,
           price: "xxxx",
           benefit: [
@@ -129,6 +140,7 @@ export default {
           ],
         },
         {
+          name: "Bisnis",
           mount: 12,
           price: "xxxx",
           benefit: [
@@ -147,6 +159,20 @@ export default {
   components: {
     CardPersonal,
     CardBusiness,
+  },
+  methods: {
+    toPagePayment(selectedPackage) {
+      console.log(selectedPackage.benefit);
+      this.$router.push({
+        name: "payment",
+        query: {
+          name: selectedPackage.name,
+          mount: selectedPackage.mount,
+          price: selectedPackage.price,
+          benefit: selectedPackage.benefit,
+        },
+      });
+    },
   },
 };
 </script>
