@@ -68,6 +68,9 @@
           <h1 class="text-[12px] flex justify-between mb-[8px]">
             Harga <span class="">Rp{{ price }}</span>
           </h1>
+          <h1 v-if="promoActive" class="text-[12px] flex justify-between mb-[8px]">
+            {{ promoActive }} <span class="text-[#FF6E79]">-Rp{{ discount }}</span>
+          </h1>
           <h1 class="text-[12px] flex justify-between">
             Total transfer<span class="font-semibold">Rp{{ price }}</span>
           </h1>
@@ -75,7 +78,7 @@
         <div class="">
           <h1 class="mb-[8px] font-semibold text-[14px]">Data Pengguna</h1>
           <div>
-            <div class="flex mb-[8px] xl:mb-[16px] pl-2 rounded-lg border">
+            <div class="flex mb-[10px] xl:mb-[16px] pl-2 rounded-lg border">
               <input
                 class="outline-none text-[14px] w-full py-2 pl-2 rounded-lg"
                 v-model="formData.name"
@@ -83,7 +86,7 @@
                 placeholder="Nama Lengkap"
               />
             </div>
-            <div class="flex mb-[8px] xl:mb-[16px] pl-2 rounded-lg border">
+            <div class="flex mb-[10px] xl:mb-[16px] pl-2 rounded-lg border">
               <input
                 class="outline-none text-[14px] w-full py-2 pl-2 rounded-lg"
                 v-model="formData.email"
@@ -91,7 +94,7 @@
                 placeholder="email"
               />
             </div>
-            <div class="flex mb-[8px] xl:mb-[16px] pl-2 rounded-lg border">
+            <div class="flex mb-[10px] xl:mb-[16px] pl-2 rounded-lg border">
               <input
                 class="outline-none text-[14px] w-full py-2 pl-2 rounded-lg"
                 v-model="formData.phone"
@@ -100,25 +103,41 @@
               />
             </div>
             <div class="rounded-lg border p-2">
-              <div class="flex mb-[12px]">
-                <img src="/payment/promo.svg" alt="" />
-                <h1 class="text-[#00B2DA]">Kode Promo (Opsional)</h1>
+              <div class="flex gap-2 mb-[12px]">
+                <img class="w-[20px]" src="/payment/promo.svg" alt="" />
+                <h1 class="text-[#00B2DA] text-[14px]">
+                  Kode Promo (Opsional)
+                </h1>
               </div>
-              <div class="flex">
-
-                  <div class="flex mb-[8px] xl:mb-[16px] pl-2 rounded-lg border">
-                      <input
-                      class="outline-none text-[14px] w-full py-2 pl-2 rounded-lg"
-                  v-model="formData.codePromo"
-                  type="text"
-                  placeholder="Masukkan kode promo"
-                />
+              <div class="flex gap-2">
+                <div
+                  class="flex mb-[8px] xl:mb-[16px] pl-2 w-full rounded-lg border"
+                >
+                  <input
+                    class="outline-none text-[14px] w-full py-2 pl-2 rounded-lg"
+                    v-model="formData.codePromo"
+                    type="text"
+                    placeholder="Masukkan kode promo"
+                  />
+                </div>
+                <div class="">
+                  <button
+                    @click="applyPromo"
+                    class="px-5 rounded-lg border py-2 text-[14px] text-[#00B2DA] border-[#00B2DA]"
+                  >
+                    Apply
+                  </button>
+                </div>
+              </div>
+              <p v-if="promoError" class="text-[#FF6E79] text-[12px] pl-2">
+                {{ promoError }}
+              </p>
             </div>
-            <button class="w-full">
-                Apply
+            <button
+              class="text-center rounded-lg w-full py-2 text-white font-medium bg-[#3A519D] mt-[30px]"
+            >
+              Bayar Sekarang
             </button>
-        </div>
-            </div>
           </div>
         </div>
       </div>
@@ -135,6 +154,9 @@ export default {
       mount: "",
       price: "",
       benefit: [],
+      discount: 0,
+      promoError: "",
+      promoActive: "",
       formData: {
         name: "",
         email: "",
@@ -143,7 +165,19 @@ export default {
       },
     };
   },
-  methods: {},
+  methods: {
+    applyPromo() {
+      const promo = this.formData.codePromo.trim().toLocaleUpperCase();
+
+      if (promo === "DISKON") {
+        this.discount = 50000;
+        this.promoActive = "Potongan harga"
+      } else {
+        this.discount = 0;
+        this.promoError = "kode promo tidak valid";
+      }
+    },
+  },
   mounted() {
     const { name, mount, price, benefit } = this.$route.query;
     this.name = name;
