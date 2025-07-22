@@ -56,7 +56,7 @@
         <div class="lg:flex lg:justify-end">
           <div class="lg:absolute">
             <div
-              class="pb-10 font-medium max-lg:bg-white w-full duration-700 z-20 transition-all absolute left-0  lg:static lg:flex lg:items-center lg:gap-[42px] xl:gap-[52px] lg:pb-0 lg:px-0 lg:py-[12px] px-5 md:px-8 "
+              class="pb-10 font-medium max-lg:bg-white w-full duration-700 z-20 transition-all absolute left-0   lg:static lg:flex lg:items-center lg:gap-[42px] xl:gap-[52px] lg:pb-0 lg:px-0 lg:py-[12px] px-5 md:px-8 "
               :class="
                 isOpen
                   ? 'max-lg:top-[0px] pt-[64px] max-lg:opacity-100'
@@ -66,12 +66,14 @@
               <div v-for="(item, index) in data" :key="index" class="pb-[16px]">
                 <a href="/">{{ item.name }}</a>
               </div>
-              <button
-                @click="toLoginPage"
-                class="text-[14px] border-[#3A519D] border-2 lg:mb-2 text-[#3A519D] w-full py-2.5 lg:py-0 pt-[8px] lg:mt-0 lg:w-[100px] mb-2 xl:mb-3 lg:h-[38px] xl:w-[100px] xl:h-[40px] duration-300 font-semibold rounded"
-              >
-                Login
-              </button>
+              <div class="hidden lg:block" :class="isOpen ? 'max-lg:block' :''">
+                <button
+                  @click="toLoginPage"
+                  class="text-[14px] border-[#3A519D] border-2 lg:mb-2 text-[#3A519D] w-full py-2.5 lg:py-0 pt-[8px] lg:mt-0 lg:w-[100px] mb-2 xl:mb-3 lg:h-[38px] xl:w-[100px] xl:h-[40px] duration-300 font-semibold rounded"
+                >
+                  Login
+                </button>
+              </div>
             </div>
           </div>
         </div>
