@@ -1,5 +1,5 @@
 <template>
-  <div class="container scroll-mt-[20px]" id="pricing">
+  <div class="container" id="pricing">
     <div class="pt-[60px]">
       <h1
         class="text-[18px] md:text-[20px] lg:text-[22px] text-center font-semibold"
@@ -72,7 +72,7 @@ export default {
         {
           name: "Personal",
           mount: 1,
-          price: "xxxx",
+          price: 100000,
           benefit: [
             "Catat dari 1 nomor whatsapp",
             "Pencatatan menggunakan AI",
@@ -86,7 +86,7 @@ export default {
         {
           name: "Personal",
           mount: 6,
-          price: "xxxx",
+          price: 100000,
           benefit: [
             "Catat dari 1 nomor whatsapp",
             "Pencatatan menggunakan AI",
@@ -100,7 +100,7 @@ export default {
         {
           name: "Personal",
           mount: 12,
-          price: "xxxx",
+          price: 100000,
           benefit: [
             "Catat dari 1 nomor whatsapp",
             "Pencatatan menggunakan AI",
@@ -116,7 +116,7 @@ export default {
         {
           name: "Bisnis",
           mount: 1,
-          price: "xxxx",
+          price: 100000,
           benefit: [
             "Catat dari 1 nomor whatsapp",
             "Pencatatan menggunakan AI",
@@ -130,7 +130,7 @@ export default {
         {
           name: "Bisnis",
           mount: 6,
-          price: "xxxx",
+          price: 100000,
           benefit: [
             "Catat dari 1 nomor whatsapp",
             "Pencatatan menggunakan AI",
@@ -144,7 +144,7 @@ export default {
         {
           name: "Bisnis",
           mount: 12,
-          price: "xxxx",
+          price: 100000,
           benefit: [
             "Catat dari 1 nomor whatsapp",
             "Pencatatan menggunakan AI",

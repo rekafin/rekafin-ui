@@ -64,7 +64,7 @@
               "
             >
               <div v-for="(item, index) in data" :key="index" class="pb-[16px]">
-                <a :href="item.link">{{ item.name }}</a>
+                <a class="hover:opacity-60" :href="item.link">{{ item.name }}</a>
               </div>
               <div
                 class="hidden lg:block"
@@ -72,7 +72,7 @@
               >
                 <button
                   @click="toLoginPage"
-                  class="text-[14px] border-[#3A519D] border-2 lg:mb-2 text-[#3A519D] w-full py-2.5 lg:py-0 pt-[8px] lg:mt-0 lg:w-[100px] mb-2 xl:mb-3 lg:h-[38px] xl:w-[100px] xl:h-[40px] duration-300 font-semibold rounded"
+                  class="text-[14px] hover:text-white hover:bg-[#3A519D] border-[#3A519D] border-2 lg:mb-2 text-[#3A519D] w-full py-2.5 lg:py-0 pt-[8px] lg:mt-0 lg:w-[100px] mb-2 xl:mb-3 lg:h-[38px] xl:w-[100px] xl:h-[40px] duration-300 font-semibold rounded"
                 >
                   Login
                 </button>

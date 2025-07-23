@@ -21,20 +21,20 @@
       >
         <div class="flex flex-col gap-2">
           <h1 class="font-semibold text-[14px] lg:text-[16px]">Rekafin</h1>
-          <a class="text-[12px] lg:text-[14px] pr-10 md:pr-20" href="#benefit"
+          <a class="text-[12px] lg:text-[14px] pr-10 md:pr-20 hover:opacity-60" href="#benefit"
             >Benefit</a
-          ><a class="text-[12px] lg:text-[14px]" href="#howtouse">How to use</a>
+          ><a class="text-[12px] lg:text-[14px] hover:opacity-60" href="#howtouse">How to use</a>
         </div>
         <div class="flex flex-col gap-2">
           <a
             href="#pricing"
-            class="font-semibold text-[14px] lg:text-[16px] pr-10 md:pr-20"
+            class="font-semibold hover:opacity-60 text-[14px] lg:text-[16px] pr-10 md:pr-20"
           >
             Pricing
           </a>
-          <a class="text-[12px] lg:text-[14px]" href="#personal"
+          <a class="text-[12px] hover:opacity-60 lg:text-[14px]" href="#personal"
             >Personal Plan</a
-          ><a class="text-[12px] lg:text-[14px]" href="/#business"
+          ><a class="text-[12px] hover:opacity-60 lg:text-[14px]" href="/#business"
             >Business Plan</a
           >
         </div>
@@ -43,7 +43,7 @@
           <div class="flex gap-2">
             <img src="/footer/whatsapp.svg" alt="contact" />
             <a
-              class="text-[12px] lg:text-[14px]"
+              class="text-[12px] lg:text-[14px] hover:opacity-60"
               href="https://wa.me/628581234567"
               target="_blank"
               rel="noopener noreferrer"
@@ -55,7 +55,7 @@
             <a
               href="https://mail.google.com/mail/?view=cm&fs=1&to=cs@rekafin.com"
               target="_blank"
-              class="text-[12px] lg:text-[14px]"
+              class="text-[12px] lg:text-[14px] hover:opacity-60"
             >
               cs@rekafin.com
             </a>
