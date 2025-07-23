@@ -21,17 +21,20 @@
       >
         <div class="flex flex-col gap-2">
           <h1 class="font-semibold text-[14px] lg:text-[16px]">Rekafin</h1>
-          <a class="text-[12px] lg:text-[14px] pr-10 md:pr-20" href="/">Benefit</a
-          ><a class="text-[12px] lg:text-[14px]" href="/HowToUse.vue"
-            >How to use</a
-          >
+          <a class="text-[12px] lg:text-[14px] pr-10 md:pr-20" href="#benefit"
+            >Benefit</a
+          ><a class="text-[12px] lg:text-[14px]" href="#howtouse">How to use</a>
         </div>
         <div class="flex flex-col gap-2">
-          <h1 class="font-semibold text-[14px] lg:text-[16px] pr-10 md:pr-20">
+          <a
+            href="#pricing"
+            class="font-semibold text-[14px] lg:text-[16px] pr-10 md:pr-20"
+          >
             Pricing
-          </h1>
-          <a class="text-[12px] lg:text-[14px]" href="/">Personal Plan</a
-          ><a class="text-[12px] lg:text-[14px]" href="/HowToUse.vue"
+          </a>
+          <a class="text-[12px] lg:text-[14px]" href="#personal"
+            >Personal Plan</a
+          ><a class="text-[12px] lg:text-[14px]" href="/#business"
             >Business Plan</a
           >
         </div>
@@ -39,13 +42,23 @@
           <h1 class="font-semibold text-[14px] lg:text-[16px]">Kontak</h1>
           <div class="flex gap-2">
             <img src="/footer/whatsapp.svg" alt="contact" />
-            <h1 class="text-[12px] lg:text-[14px]" href="/">08581234567</h1>
+            <a
+              class="text-[12px] lg:text-[14px]"
+              href="https://wa.me/628581234567"
+              target="_blank"
+              rel="noopener noreferrer"
+              >08581234567</a
+            >
           </div>
           <div class="flex gap-2">
             <img src="/footer/phone.svg" alt="contact" />
-            <h1 class="text-[12px] lg:text-[14px]" href="/HowToUse.vue">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=cs@rekafin.com"
+              target="_blank"
+              class="text-[12px] lg:text-[14px]"
+            >
               cs@rekafin.com
-            </h1>
+            </a>
           </div>
           <div class="flex gap-2">
             <img
@@ -69,18 +82,18 @@
       Copyright © 2025 Rekafin. All rights reserved.
     </h1>
     <div class="flex justify-center gap-6 my-5 md:my-0">
-      <button>
+      <a href="https://www.facebook.com" target="_blank">
         <img src="/footer/facebook.svg" alt="icon-media-social" />
-      </button>
-      <button>
+      </a>
+      <a href="https://www.linkedin.com" target="_blank">
         <img src="/footer/linkedin.svg" alt="icon-media-social" />
-      </button>
-      <button>
+      </a>
+      <a href="https://www.twitter.com" target="_blank">
         <img src="/footer/twitter.svg" alt="icon-media-social" />
-      </button>
-      <button>
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
         <img src="/footer/instagram.svg" alt="icon-media-social" />
-      </button>
+      </a>
     </div>
   </div>
 </template>

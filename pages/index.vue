@@ -3,7 +3,7 @@
     <Navbar />
     <IntroSection />
     <Portofolio />
-    <HowToUse />
+    <HowToUse/>
     <Pricing />
     <FaqSection />
     <Footer/>

@@ -2,13 +2,11 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  tailwindcss: {
-    exposeConfig: true,
-    viewer: true,
-  },
-  googleFonts: {
-    families: {
-      Manrope: [400, 500, 700],
+  css: ['/main.css'],
+    postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
     },
   },
   vite: {
@@ -19,5 +17,4 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxtjs/google-fonts"],
 });

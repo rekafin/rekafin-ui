@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-[50px] lg:mt-[80px] pb-16 ">
+  <div class="container mt-[50px] lg:mt-[80px] pb-16 scroll-mt-[100px]" id="faq">
     <div class="text-center">
       <h1 class="text-[20px] font-bold">Frequently Asked Question</h1>
       <p class="text-[12px] md:text-[14px] lg:text-[16px] mt-2">

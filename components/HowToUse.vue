@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#F1F4FF]">
+    <div class="bg-[#F1F4FF] scroll-mt-[60px]" id="howtouse">
         <div class=" py-[50px] container relative">
           <div class="text-center pb-[30px]">
             <h1 class="text-[20px] font-bold">How to use</h1>

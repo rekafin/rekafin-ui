@@ -1,5 +1,5 @@
 <template>
-  <div class="shadow-md rounded-lg mt-2 mb-10 sm:mb-5">
+  <div class="shadow-md rounded-lg mt-2 mb-10 sm:mb-5 scroll-mt-[100px]" id="business">
     <div
       class="p-5 rounded-t-lg bg-[linear-gradient(to_bottom_right,_#ffffff,_#BCEDFF,_#D9E0FE,_#ffffff)]"
     >

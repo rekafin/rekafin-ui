@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container scroll-mt-[20px]" id="pricing">
     <div class="pt-[60px]">
       <h1
         class="text-[18px] md:text-[20px] lg:text-[22px] text-center font-semibold"
@@ -15,7 +15,7 @@
       <div
         class="flex justify-between gap-3 p-1.5 my-8 border-2 rounded-lg w-[286px] sm:w-[290px] md:w-[300px] lg:w-[320px]"
       >
-        <div class="">
+        <div class="" id="personal">
           <button
             @click="isOpenBusiness = true"
             :class="isOpenBusiness ? 'bg-[#3A519D] text-white' : ''"
@@ -24,7 +24,7 @@
             Personal
           </button>
         </div>
-        <div class="">
+        <div class="" id="business">
           <button
             @click="isOpenBusiness = false"
             :class="!isOpenBusiness ? 'bg-[#3A519D] text-white' : ''"
@@ -36,7 +36,7 @@
       </div>
     </div>
     <div
-      v-if="isOpenBusiness"
+      v-if="isOpenBusiness" 
       class="lg:mb-16 mb-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5"
     >
       <CardPersonal
@@ -46,9 +46,10 @@
         @goToPayment="toPagePayment"
       />
     </div>
-    <div v-else>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5">
+    <div v-else class="" >
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5 ">
         <CardBusiness
+
           v-for="(card, index) in cardsBusiness"
           :key="index"
           :dataCard="card"
@@ -62,6 +63,7 @@
 <script>
 import CardPersonal from "./CardPersonal.vue";
 import CardBusiness from "./CardBusiness.vue";
+
 export default {
   data() {
     return {
@@ -160,9 +162,14 @@ export default {
     CardPersonal,
     CardBusiness,
   },
+  mounted() {
+    this.handleHash(window.location.hash);
+  },
+  watch: {
+    '$route.hash': 'handleHash'
+  },
   methods: {
     toPagePayment(selectedPackage) {
-      console.log(selectedPackage.benefit);
       this.$router.push({
         name: "payment",
         query: {
@@ -173,8 +180,21 @@ export default {
         },
       });
     },
+    handleHash(hashtag) {
+      if (hashtag === '#business') {
+        this.isOpenBusiness = false;
+      } else if (hashtag === '#personal') {
+        this.isOpenBusiness = true;
+      }
+
+      this.$nextTick(() => {
+        const dataHashtag = document.querySelector("#pricing");
+        if (dataHashtag) dataHashtag.scrollIntoView({ behavior: "smooth" });
+      });
+    },
   },
 };
 </script>
+
 
 <style></style>

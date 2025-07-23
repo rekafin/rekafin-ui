@@ -1,8 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 import defaultTheme from "tailwindcss/defaultTheme";
-import plugin from 'tailwindcss/plugin';
+import plugin from "tailwindcss/plugin";
 export default {
-  content: [],
+  content: [
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./app.vue",
+    "./error.vue",
+  ],
   theme: {
     extend: {
       backgroundImage: {
@@ -17,11 +24,11 @@ export default {
         "form-text": "#536471",
         "btn-primary": "#3A519D",
         "underline-color": "#249CD9",
-        "neutral": "#2D2D2D",
+        neutral: "#2D2D2D",
       },
     },
   },
-    plugins: [
+  plugins: [
     plugin(function ({ addComponents }) {
       addComponents({
         ".container": {

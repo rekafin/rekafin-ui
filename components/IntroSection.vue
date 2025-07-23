@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[linear-gradient(to_bottom_right,_#ffffff,_#BCEDFF,_#D9E0FE,_#ffffff)] rounded-b-[45px] h-[620px] md:h-[780px] lg:h-[740px] md:rounded-b-[1px] lg:rounded-b-[1px] relative">
+    <div class="bg-[linear-gradient(to_bottom_right,_#ffffff,_#BCEDFF,_#D9E0FE,_#ffffff)] rounded-b-[45px] h-[620px] md:h-[710px] lg:h-[550px] xl:h-[610px] md:rounded-b-[1px] lg:rounded-b-[1px] relative mb-[140px] md:mb-[190px] lg:mb-[230px]">
         <div class="container ">
           <div class="pt-[120px] flex flex-col justify-center text-center ">
               <h1 class="text-[22px] lg:text-[30px] font-bold">Atur Keuangan Tanpa Ribet, Cukup Lewat Chat!</h1>
@@ -18,7 +18,7 @@
           <img class="w-full h-auto lg:hidden" src="/intro-section/background-mobile.webp" alt="">
         </div>
         <div class="mt-[18px] lg:container flex justify-center relative">
-          <img class=" h-auto hidden lg:block xl:w-[806px] w-[700px]" src="/intro-section/background-desktop.webp" alt="">
+          <img class=" h-auto hidden lg:block xl:w-[806px] w-[700px] " src="/intro-section/background-desktop.webp" alt="">
           <img class="hidden lg:block absolute xl:w-[200px] w-[170px] xl:top-0 -top-3 left-[140px] xl:left-[344px]" src="/intro-section/time.webp" alt="">
           <img class="hidden lg:block absolute xl:w-[200px] w-[170px] xl:top-20 top-10 left-[180px] xl:left-[284px]" src="/intro-section/support.webp" alt="">
           <img class="hidden lg:block absolute xl:w-[200px] w-[170px] xl:top-[140px] top-[100px] left-[140px] xl:left-[344px]" src="/intro-section/simple.webp" alt="">
