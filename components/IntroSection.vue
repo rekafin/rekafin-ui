@@ -23,7 +23,7 @@
           </nuxt-link>
         </div>
         <div class="mt-[14px] md:mt-0">
-          <nuxt-link to="#pricing">
+          <nuxt-link to="#price">
             <button
               class="text-white  hover:opacity-60 border-2 md:p-3 text-[14px] font-semibold rounded-lg bg-[#3A519D] w-full py-2"
             >

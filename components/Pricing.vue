@@ -1,5 +1,5 @@
 <template>
-  <div class="container" id="pricing">
+  <div class="container" id="price">
     <div class="pt-[60px]">
       <h1
         class="text-[18px] md:text-[20px] lg:text-[22px] text-center font-semibold"
