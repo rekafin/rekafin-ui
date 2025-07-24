@@ -143,6 +143,7 @@
 
         <div>
           <div
+            v-if="!isOpenChekout"
             class="bg-white p-3 lg:p-4 shadow-md flex-col rounded-lg flex gap-[8px] lg:mt-[70px] xl:mt-[75px] mb-[8px]"
           >
             <h1
@@ -237,7 +238,7 @@
                     <div class="">
                       <button
                         @click="applyPromo"
-                        class="bg-gradient-to-br from-[#DCFBFD] to-[#DFFCFE00] px-5 rounded-lg border py-2 text-[14px] lg:text-[16px] xl:text-[18px] text-[#00B2DA] border-[#00B2DA]"
+                        class="bg-gradient-to-br from-[#DCFBFD] to-[#DFFCFE00] hover:opacity-60 px-5 rounded-lg border py-2 text-[14px] lg:text-[16px] xl:text-[18px] text-[#00B2DA] border-[#00B2DA]"
                       >
                         Apply
                       </button>
@@ -252,11 +253,141 @@
                 </div>
                 <button
                   @click="handleSubmit"
-                  class="text-center text-[14px] lg:text-[16px] xl:text-[18px] lg:py-3 rounded-lg w-full py-2 text-white font-medium bg-[#3A519D] mt-[30px]"
+                  class="text-center hover:opacity-60 text-[14px] lg:text-[16px] xl:text-[18px] lg:py-3 rounded-lg w-full py-2 text-white font-medium bg-[#3A519D] mt-[30px]"
                 >
                   Bayar Sekarang
                 </button>
               </div>
+            </div>
+          </div>
+
+          <div
+            v-if="isOpenChekout"
+            class="bg-white p-3 lg:p-4 shadow-md flex-col rounded-lg flex gap-[8px] lg:mt-[70px] xl:mt-[75px] mb-[8px]"
+          >
+            <div class="mb-[12]">
+              <div
+                class="bg-[#3A519D1A] mb-[12px] flex flex-col gap-[4px] text-center py-3 rounded-lg"
+              >
+                <h1 class="text-[12px]">Total transfer</h1>
+                <p class="text-[#3A519D] text-[16px] font-bold">
+                  Rp{{ finalPrice.toFixed(3) }}
+                </p>
+              </div>
+              <div class="mb-[8px]">
+                <h1 class="text-[12px] lg:text-[14px] xl:text-[16px]">
+                  Customer details
+                </h1>
+              </div>
+              <div class="mb-[24px]">
+                <h1
+                  class="flex justify-between text-[12px] lg:text-[14px] xl:text-[16px] font-medium"
+                >
+                  {{ checkout.name }}
+                  <span class="mt-2">+62{{ checkout.phone.slice(1) }}</span>
+                </h1>
+                <p
+                  class="text-[#66738F] text-[12px] lg:text-[14px] xl:text-[16px]"
+                >
+                  Order ID #12345
+                </p>
+              </div>
+              <div>
+                <h1
+                  class="flex justify-between text-[12px] lg:text-[14px] xl:text-[16px]"
+                >
+                  Product detail <span>Rekafin Basic {{ mount }} bulan</span>
+                </h1>
+              </div>
+              <div>
+                <h1
+                  class="my-[12px] font-medium text-[14px] lg:text-[16px] xl:text-[18px]"
+                >
+                  Transfer ke
+                </h1>
+                <div class="grid grid-cols-2 gap-[12px] relative">
+                  <div
+                    class="border rounded-lg p-3 shadow-md border-[#ABBED140]"
+                    v-for="bank in banks"
+                    :key="bank"
+                  >
+                    <img
+                      class="w-[60px] mb-[6px]"
+                      :src="bank.image"
+                      :alt="bank.name"
+                    />
+                    <div>
+                      <div class="flex gap-2">
+                        <h1
+                          class="text-[14px] lg:text-[16px] xl:text-[18px] font-medium"
+                        >
+                          {{ bank.rekening }}
+                        </h1>
+                        <button @click="isCopy(bank.rekening)">
+                          <img src="/payment/copy.svg" alt="" />
+                        </button>
+                      </div>
+                      <p
+                        v-if="copySuccess"
+                        class="fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-[#00B2DA] text-white px-4 py-2 rounded-lg text-[12px] lg:text-[14px] shadow-lg transition-opacity duration-300"
+                      >
+                        {{ copySuccess }}
+                      </p>
+
+                      <p class="text-[12px] lg:text-[14px] xl:text-[16px]">
+                        {{ bank.name }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-[20px] mb-[28px] flex-col rounded-lg flex gap-[8px]">
+              <div
+                @click="isOpenHowToPay = !isOpenHowToPay"
+                class="flex justify-between w-full cursor-pointer"
+              >
+                <button
+                  class="text-[14px] lg:text-[16px] xl:text-[18px] text-[#00B2DA] font-medium"
+                >
+                  <span
+                    class="rounded-full text-[14px] lg:text-[16px] xl:text-[18px] px-1.5 lg:px-[7px] xl:px-2 bg-[#00B2DA] text-white"
+                    >?</span
+                  >
+                  How to Pay
+                </button>
+                <div>
+                  <div
+                    class="pl-1 transform transition-transform duration-300"
+                    :class="isOpenHowToPay ? 'rotate-0' : 'rotate-180'"
+                  >
+                    <img src="/payment/chevron-up.svg" alt="vector" />
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3" v-if="isOpenHowToPay">
+                <div
+                  class="flex mb-1 text-[12px] lg:text-[14px] xl:text-[16px]"
+                ></div>
+              </div>
+            </div>
+            <div class="">
+              <nuxt-link to="https://wa.me/628581234567" target="_blank">
+                <button
+                  @click="sendPayment"
+                  class="text-center hover:opacity-60 text-[14px] lg:text-[16px] xl:text-[18px] lg:py-3 rounded-lg w-full py-2 text-white font-medium bg-[#3A519D]"
+                >
+                  Kirim Bukti Pembayaran
+                </button>
+              </nuxt-link>
+            </div>
+            <div class="">
+              <button
+                @click="isOpenChekout = false"
+                class="text-center hover:opacity-60 text-[14px] lg:text-[16px] xl:text-[18px] lg:py-3 rounded-lg border-2 border-[#3A519D] w-full py-2 text-[#3A519D] font-medium bg-white mt-[12px]"
+              >
+                Kembali
+              </button>
             </div>
           </div>
         </div>
@@ -270,13 +401,22 @@ export default {
   data() {
     return {
       isOpen: true,
+      isOpenHowToPay: false,
       selectedPlan: null,
       showPlans: false,
       showLogin: true,
+      isOpenChekout: false,
+      copySuccess: "",
       name: "",
       mount: "",
       price: 0,
       change: false,
+      checkout: {
+        name: "farhan",
+        phone: "08228093",
+        email: "",
+        codePromo: "",
+      },
       benefit: [],
       discount: 0,
       promoError: "",
@@ -314,6 +454,18 @@ export default {
           checklist: "/payment/checklist.svg",
         },
       ],
+      banks: [
+        {
+          name: "BCA - Faishal Arif",
+          rekening: 1280427531,
+          image: "/payment/bca.webp",
+        },
+        {
+          name: "BNI - Faishal Arif",
+          rekening: 1933772673,
+          image: "/payment/bni.webp",
+        },
+      ],
     };
   },
   methods: {
@@ -347,7 +499,9 @@ export default {
       }
 
       if (valid) {
-        console.log(this.formData);
+        this.checkout = { ...this.formData };
+        this.isOpenChekout = true;
+        console.log(this.checkout);
       }
     },
     setSelectedPlan(plan) {
@@ -356,6 +510,19 @@ export default {
       this.mount = plan.mount;
       this.price = plan.price;
       this.showPlans = false;
+    },
+    isCopy(text) {
+      navigator.clipboard
+        .writeText(text)
+        .then(() => {
+          this.copySuccess = "Nomor rekening berhasil disalin!";
+          setTimeout(() => {
+            this.copySuccess = "";
+          }, 3000);
+        })
+        .catch((err) => {
+          console.error("Gagal menyalin teks: ", err);
+        });
     },
   },
   mounted() {
@@ -368,7 +535,6 @@ export default {
     this.selectedPlan = this.changePlan.find(
       (find) => find.mount == this.mount
     );
-    console.log("Parsed plan:", this.change);
   },
   computed: {
     finalPrice() {

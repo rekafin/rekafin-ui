@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-[linear-gradient(to_bottom_right,_#ffffff,_#BCEDFF,_#D9E0FE,_#ffffff)] rounded-b-[45px] h-[620px] md:h-[710px] lg:h-[550px] xl:h-[610px] md:rounded-b-[1px] lg:rounded-b-[1px] relative mb-[140px] md:mb-[190px] lg:mb-[230px]"
+    class="bg-[linear-gradient(to_bottom_right,_#ffffff,_#BCEDFF,_#D9E0FE,_#ffffff)]  h-[620px] md:h-[710px] lg:h-[550px] xl:h-[610px] relative mb-[140px] md:mb-[220px] lg:mb-[230px]"
   >
     <div class="container">
       <div class="pt-[120px] flex flex-col justify-center text-center">
@@ -14,11 +14,13 @@
       </div>
       <div class="md:flex md:justify-center md:gap-[16px] md:mt-[20px]">
         <div class="mt-[18px] md:mt-0">
-          <button
-            class="text-[#3A519D] hover:opacity-60 md:p-3 text-[14px] font-semibold border-2 rounded-lg border-[#3A519D] w-full py-2"
-          >
-            Pelajari Selengkapnya
-          </button>
+          <nuxt-link to="#benefit">
+            <button
+              class="text-[#3A519D] hover:opacity-60 md:p-3 text-[14px] font-semibold border-2 rounded-lg border-[#3A519D] w-full py-2"
+            >
+              Pelajari Selengkapnya
+            </button>
+          </nuxt-link>
         </div>
         <div class="mt-[14px] md:mt-0">
           <nuxt-link to="#pricing">
