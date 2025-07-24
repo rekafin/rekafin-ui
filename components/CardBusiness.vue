@@ -6,7 +6,7 @@
       <h1 class="py-1.5 text-[18px] font-medium">
        {{ dataCard.name }} {{ dataCard.mount }} Bulan
       </h1>
-      <h1 class="pb-2 font-medium text-[32px]">Rp{{ dataCard.price }}</h1>
+      <h1 class="pb-2 font-medium text-[32px]">Rp{{ dataCard.price.toFixed(3)  }}</h1>
     </div>
     <div class="px-5 py-3 flex flex-col justify-between">
       <div class="" v-for="card in dataCard.benefit" :key="card">
