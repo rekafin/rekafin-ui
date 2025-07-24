@@ -307,7 +307,7 @@
                 </h1>
                 <div class="grid grid-cols-2 gap-[12px] relative">
                   <div
-                    class="border rounded-lg p-3 shadow-md border-[#ABBED140]"
+                    class="border flex flex-col justify-between rounded-lg p-3 shadow-md border-[#ABBED140]"
                     v-for="bank in banks"
                     :key="bank"
                   >
