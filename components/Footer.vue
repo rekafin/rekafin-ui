@@ -27,7 +27,7 @@
         </div>
         <div class="flex flex-col gap-2">
           <a
-            href="#pricing"
+            href="#price"
             class="font-semibold hover:opacity-60 text-[14px] lg:text-[16px] pr-10 md:pr-20"
           >
             Pricing

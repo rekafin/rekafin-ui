@@ -94,7 +94,7 @@ export default {
       data: [
         { name: "Benefit", link: "#benefit" },
         { name: "How to use", link: "#howtouse" },
-        { name: "Pricing", link: "#pricing" },
+        { name: "Pricing", link: "#price" },
         { name: "FAQ", link: "#faq" },
       ],
     };
