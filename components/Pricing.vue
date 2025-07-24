@@ -72,7 +72,8 @@ export default {
         {
           name: "Personal",
           mount: 1,
-          price: 100000,
+          price: 100.0,
+          change: false,
           benefit: [
             "Catat dari 1 nomor whatsapp",
             "Pencatatan menggunakan AI",
@@ -86,7 +87,8 @@ export default {
         {
           name: "Personal",
           mount: 6,
-          price: 100000,
+          price: 200.0,
+          change: false,
           benefit: [
             "Catat dari 1 nomor whatsapp",
             "Pencatatan menggunakan AI",
@@ -100,7 +102,8 @@ export default {
         {
           name: "Personal",
           mount: 12,
-          price: 100000,
+          price: 300.0,
+          change: false,
           benefit: [
             "Catat dari 1 nomor whatsapp",
             "Pencatatan menggunakan AI",
@@ -116,7 +119,8 @@ export default {
         {
           name: "Bisnis",
           mount: 1,
-          price: 100000,
+          price: 100.0,
+          change: false,
           benefit: [
             "Catat dari 1 nomor whatsapp",
             "Pencatatan menggunakan AI",
@@ -130,7 +134,8 @@ export default {
         {
           name: "Bisnis",
           mount: 6,
-          price: 100000,
+          price: 200.0,
+          change: false,
           benefit: [
             "Catat dari 1 nomor whatsapp",
             "Pencatatan menggunakan AI",
@@ -144,7 +149,8 @@ export default {
         {
           name: "Bisnis",
           mount: 12,
-          price: 100000,
+          price: 300.0,
+          change: false,
           benefit: [
             "Catat dari 1 nomor whatsapp",
             "Pencatatan menggunakan AI",
@@ -176,6 +182,7 @@ export default {
           name: selectedPackage.name,
           mount: selectedPackage.mount,
           price: selectedPackage.price,
+          change: selectedPackage.change,
           benefit: selectedPackage.benefit,
         },
       });

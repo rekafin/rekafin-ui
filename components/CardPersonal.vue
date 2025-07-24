@@ -2,7 +2,7 @@
   <div class="shadow-md rounded-lg mt-2 mb-10 sm:mb-5 scroll-mt-[100px]" id="personal">
     <div class="p-5 rounded-t-lg bg-[linear-gradient(to_bottom_right,_#ffffff,_#BCEDFF,_#D9E0FE,_#ffffff)]">
         <h1 class="py-1.5 text-[18px] font-medium">{{ dataCard.name }} {{ dataCard.mount }} Bulan</h1>
-        <h1 class="pb-2 font-medium text-[32px]">Rp{{ dataCard.price }}</h1>
+        <h1 class="pb-2 font-medium text-[32px]">Rp{{ dataCard.price.toFixed(3) }}</h1>
     </div>
     <div class="px-5 py-3 flex flex-col justify-between">
         <div class="" v-for="card in dataCard.benefit" :key="card">
