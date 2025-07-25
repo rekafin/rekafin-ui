@@ -1,7 +1,7 @@
 <template>
-  <div class="lg:bg-[linear-gradient(to_bottom_right,_#ffffff,_#ffffff,_#ffffff,_#c0eafa)] max-lg:bg-[linear-gradient(to_top_right,_#ffffff,_#ffffff,_#c0eafa,_#c0eafa)]">
+  <div class="lg:bg-[linear-gradient(to_bottom_right,_#ffffff,_#ffffff,_#ffffff,_#c0eafa)] max-lg:bg-[linear-gradient(to_top_right,_#ffffff,_#c0eafa,_#c0eafa,_#c0eafa)]">
     <div 
-    class="container pt-[100px] lg:mt-[80px] pb-20 scroll-mt-[100px]" id="faq"
+    class="container pt-[100px] lg:pt-[80px] pb-20 scroll-mt-[100px]" id="faq"
     >
       <div class="text-center">
         <h1 class="text-[20px] font-bold">Frequently Asked Question</h1>
