@@ -3,10 +3,10 @@
     <Navbar />
     <IntroSection />
     <Portofolio />
-    <HowToUse/>
+    <HowToUse />
     <Pricing />
     <FaqSection />
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
@@ -20,7 +20,7 @@ import FaqSection from "~/components/FaqSection.vue";
 import Footer from "~/components/Footer.vue";
 
 export default {
-  components:{
+  components: {
     Navbar,
     IntroSection,
     Portofolio,
@@ -28,7 +28,7 @@ export default {
     Pricing,
     FaqSection,
     Footer,
-  }
+  },
 };
 </script>
 

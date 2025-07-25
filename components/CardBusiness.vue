@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="my-5">
-        <button @click="$emit('goToPayment', dataCard)" class="text-center py-2 hover:opacity-60 text-white font-medium rounded-lg bg-[#3A519D] w-full">Mulai Berlangganan</button>
+        <button @click="$emit('goToPayment', dataCard)" class="text-center py-2 hover:text-white text-[#3A519D] font-medium rounded-lg border border-[#3A519D] hover:bg-[#3A519D] w-full">Mulai Berlangganan</button>
       </div>
     </div>
   </div>
