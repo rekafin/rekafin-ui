@@ -187,6 +187,12 @@
                     placeholder="Nama Lengkap"
                   />
                 </div>
+                <p
+                  v-if="formErrors.name"
+                  class="text-[#FF6E79] text-[12px] lg:text-[14px] xl:text-[16px] mb-2 pl-2"
+                >
+                  {{ formErrors.name }}
+                </p>
                 <div class="flex mb-[10px] xl:mb-[16px] pl-2 rounded-lg border">
                   <input
                     class="outline-none text-[14px] lg:text-[16px] xl:text-[18px] w-full py-2 pl-2 rounded-lg"
@@ -422,6 +428,7 @@ export default {
       promoError: "",
       promoActive: "",
       formErrors: {
+        name: "",
         email: "",
         phone: "",
       },
@@ -483,11 +490,16 @@ export default {
       }
     },
     handleSubmit() {
+      this.formErrors.name = "";
       this.formErrors.email = "";
       this.formErrors.phone = "";
 
       let valid = true;
 
+      if (!this.formData.email.trim()) {
+        this.formErrors.name = "Nama Lengkap tidak boleh kosong";
+        valid = false;
+      }
       if (!this.formData.email.trim()) {
         this.formErrors.email = "Email tidak boleh kosong";
         valid = false;

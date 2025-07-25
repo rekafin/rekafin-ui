@@ -1,5 +1,5 @@
 <template>
-    <div class="container scroll-mt-[80px]" id="benefit">
+    <div class="container scroll-mt-[80px] my-[48px] lg:my-[80px]" id="benefit">
   <div class="flex flex-col justify-center text-center md:mt-10">
       <h1 class="font-semibold text-[20px] md:text-[22px] lg:text-[24px]">
             Kenapa harus Rekafin?

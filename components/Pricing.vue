@@ -37,7 +37,7 @@
     </div>
     <div
       v-if="isOpenBusiness" 
-      class="lg:mb-16 mb-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5"
+      class="lg:mb-16 mb-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-5"
     >
       <CardPersonal
         v-for="(card, index) in cardsPersonal"
